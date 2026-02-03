@@ -1,96 +1,85 @@
-export default function SkillsSection() {
-  const skillGroups = [
-    {
-      title: "Frontend",
-      gradient: "from-blue-600 to-cyan-500",
-      skills: [
-        { name: "HTML", img: "/skills/html.png" },
-        { name: "CSS", img: "/skills/css.png" },
-        { name: "Tailwind CSS", img: "/skills/tailwind.png" },
-        { name: "JavaScript", img: "/skills/javascript.png" },
-        { name: "React.js", img: "/skills/react.png" },
-        { name: "Next.js", img: "/skills/next.png" },
-      ],
-    },
-    {
-      title: "Backend",
-      gradient: "from-purple-600 to-pink-500",
-      skills: [
-        { name: "Node.js", img: "/skills/node.png" },
-        { name: "REST API", img: "/skills/rest api.png" },
-        { name: "GraphQL", img: "/skills/graphql.png" },
-      ],
-    },
-    {
-      title: "Tools & State",
-      gradient: "from-emerald-600 to-green-500",
-      skills: [
-        { name: "Redux", img: "/skills/redux.png" },
-        { name: "GitHub", img: "/skills/github.png" },
-      ],
-    },
-  ];
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 
+const skillsData = [
+  {
+    category: "Frontend",
+    items: [
+      { name: "HTML", level: "95%" },
+      { name: "CSS", level: "90%" },
+      { name: "JavaScript", level: "85%" },
+      { name: "React", level: "85%" },
+      { name: "Next.js", level: "80%" },
+      { name: "Tailwind CSS", level: "90%" },
+    ]
+  },
+  {
+    category: "Backend",
+    items: [
+      { name: "Node.js", level: "75%" },
+      { name: "Express.js", level: "75%" },
+      { name: "MongoDB", level: "70%" },
+      { name: "REST API", level: "80%" },
+    ]
+  },
+  {
+    category: "Tools & Others",
+    items: [
+      { name: "Git & GitHub", level: "85%" },
+      { name: "VS Code", level: "90%" },
+      { name: "Responsive Design", level: "95%" },
+    ]
+  }
+];
+
+const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="py-24 px-4 md:px-8 lg:px-20 bg-white"
-    >
-      {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-20">
-        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-          Technical <span className="text-blue-600">Skills</span>
-        </h2>
-        <p className="mt-6 text-gray-600 text-lg leading-relaxed">
-          I build modern, scalable web applications with a strong focus on clean
-          UI, performance, and maintainable code. These are the technologies I
-          use to create reliable, production-ready digital experiences.
-        </p>
-      </div>
+    <section id="skills" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">My Skills</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Technological stack and tools I use to build seamless digital experiences.
+          </p>
+        </div>
 
-      {/* Skill Groups */}
-      <div className="grid gap-16">
-        {skillGroups.map((group) => (
-          <div key={group.title}>
-            {/* Group Title */}
-            <h3
-              className={`mb-8 text-lg font-semibold tracking-wide
-              bg-gradient-to-r ${group.gradient} bg-clip-text text-transparent`}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillsData.map((category, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
-              {group.title}
-            </h3>
-
-            {/* Skills Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {group.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="
-                    group rounded-2xl p-6
-                    bg-gray-50
-                    border border-gray-200
-                    shadow-sm
-                    transition-all duration-300
-                    hover:-translate-y-1 hover:shadow-lg
-                  "
-                >
-                  <div className="flex flex-col items-center text-center">
-                    <img
-                      src={skill.img}
-                      alt={skill.name}
-                      className="w-12 h-12 mb-4 object-contain
-                      group-hover:scale-110 transition-transform"
-                    />
-                    <p className="text-sm font-semibold text-gray-800">
-                      {skill.name}
-                    </p>
+              <h3 className="text-2xl font-bold text-center text-gray-800 mb-6 border-b pb-4">
+                {category.category}
+              </h3>
+              <div className="space-y-4">
+                {category.items.map((skill, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-gray-700 font-medium">{skill.name}</span>
+                      {/* <span className="text-sm text-gray-500">{skill.level}</span> */}
+                      {/* Level number hidden for cleaner look, visual bar only */}
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div
+                        className="bg-blue-600 h-2.5 rounded-full transition-all duration-1000 ease-out"
+                        style={{ width: skill.level }}
+                      ></div>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default Skills;
