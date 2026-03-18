@@ -1,22 +1,53 @@
 # Portfolio - Bishmeeta Thapa
 
-A modern, responsive, and interactive personal portfolio website built with **React**, **Next.js**, and **Tailwind CSS**.
+A modern, responsive, and interactive personal portfolio website built with **React**, **Next.js**, and **Tailwind CSS**. This project showcases my skills, experience, and complete project history.
 
 ![Portfolio Preview](./public/preview.png)
 *(Note: Add a screenshot of the portfolio here)*
 
 ## 🚀 Features
 
-- **Modern UI/UX**: Clean design with glassmorphism effects and consistent color palette.
-- **Responsive Design**: Fully responsive layout optimized for mobile, tablet, and desktop.
-- **Smooth Animations**: Powered by `framer-motion` for engaging user interactions.
-- **Sections**:
-  - **Hero**: Dynamic introduction with call-to-action.
-  - **About**: Personal background and stats.
-  - **Skills**: Visual representation of technical expertise.
-  - **Projects**: Showcase of work with GitHub and Live Demo links.
-  - **Contact**: Functional contact form (simulated) and contact details.
-- **SEO Optimized**: Proper metadata, Open Graph tags, and semantic HTML.
+- **Modern UI/UX**: Clean design with glassmorphism standard, smooth gradients, and consistent typography.
+- **Responsive Layout**: Fully optimized for all device sizes (Mobile, Tablet, Desktop).
+- **Interactive Animations**: Powered by `framer-motion` for engaging entry animations and hover effects.
+- **Dynamic Projects Section**: A showcase of real-world projects with GitHub/Live links.
+- **Refactored About Section**: Clean layout using information cards for Experience, Projects, and Support instead of generic images.
+- **Functional Contact Form**: Interactive form with validation and simulated submission feedback.
+- **SEO Optimized**: Dynamic metadata, Open Graph tags, and semantic HTML structure.
+
+## 📂 Projects Showcase
+
+Here are the key projects featured in this portfolio:
+
+### 1. Ecommerce Website
+- **Description**: A fully responsive e-commerce platform featuring product listings, shopping cart management, and secure checkout. Built with React and Redux for state management.
+- **Tech Stack**: React, Redux, Tailwind CSS
+- **Code**: [View on GitHub](https://github.com/BishmeetaThapa/ecommerce)
+
+### 2. To Do List
+- **Description**: A feature-rich task management app to organize daily activities with local storage support.
+- **Tech Stack**: React, JavaScript, CSS
+- **Code**: [View on GitHub](https://github.com/BishmeetaThapa/todo-list)
+
+### 3. Quiz App
+- **Description**: An interactive quiz application with timer, score tracking, and category selection.
+- **Tech Stack**: React, TypeScript, Tailwind
+- **Code**: [View on GitHub](https://github.com/BishmeetaThapa/quiz-app)
+
+### 4. Calculator
+- **Description**: A fully functional calculator with standard arithmetic operations and a sleek design.
+- **Tech Stack**: JavaScript, HTML, CSS
+- **Code**: [View on GitHub](https://github.com/BishmeetaThapa/calculator)
+
+### 5. Tic Tac Toe
+- **Description**: A classic game featuring Player vs Player and Player vs AI modes.
+- **Tech Stack**: React, Next.js, Tailwind CSS
+- **Code**: [View on GitHub](https://github.com/BishmeetaThapa/tic-tac-toe)
+
+### 6. Personal Portfolio
+- **Description**: This personal portfolio website itself, built with highly modern practices.
+- **Tech Stack**: Next.js, TypeScript, Tailwind, Framer Motion
+- **Code**: [View on GitHub](https://github.com/BishmeetaThapa/portfolio)
 
 ## 🛠 Tech Stack
 
@@ -33,13 +64,13 @@ A modern, responsive, and interactive personal portfolio website built with **Re
 my-portfolio/
 ├── app/
 │   ├── components/
-│   │   ├── About/
-│   │   ├── Contact/
-│   │   ├── Footer/
-│   │   ├── Hero/
-│   │   ├── Navbar/
-│   │   ├── Projects/
-│   │   └── Skills/
+│   │   ├── About/      # Refactored with info cards
+│   │   ├── Contact/    # Form handling
+│   │   ├── Footer/     # Social links
+│   │   ├── Hero/       # Intro animations
+│   │   ├── Navbar/     # Responsive & Glassmorphism
+│   │   ├── Projects/   # Dynamic project grid
+│   │   └── Skills/     # Visual skill bars
 │   ├── layout.tsx      # Root layout & SEO
 │   ├── page.tsx        # Main entry point
 │   └── globals.css     # Global styles & Tailwind
@@ -50,7 +81,6 @@ my-portfolio/
 ## ⚡ Getting Started
 
 ### Prerequisites
-
 - Node.js (v18 or higher)
 - npm or yarn
 
@@ -73,7 +103,7 @@ my-portfolio/
    ```
 
 4. **Open your browser:**
-   Navigate to [http://localhost:3000](http://localhost:3000) (or 3001 if 3000 is taken).
+   Navigate to [http://localhost:3000](http://localhost:3000).
 
 ## 🚀 Deployment
 
