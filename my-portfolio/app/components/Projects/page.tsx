@@ -2,56 +2,78 @@
 import React from "react";
 import { MoveRight, Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import ecommerceImg from "../../../public/ecommerce.png";
+import todolistImg from "../../../public/todolist.png";
+import quizzImg from "../../../public/quizz.png";
+import calculatorImg from "../../../public/calculator.png";
+import ticTacToeImg from "../../../public/tic-tac-toe.png";
+import portfolioImg from "../../../public/portfolio.png";
+import weatherImg from "../../../public/weather.png";
 
 const projects = [
     {
         title: "Ecommerce Website",
         description: "A fully responsive e-commerce platform featuring product listings, shopping cart management, and secure checkout. Built with React and Redux for state management.",
         tags: ["React", "Redux", "Tailwind CSS"],
-        image: "/project1.png",
+        image: ecommerceImg,
         demo: "#",
         code: "https://github.com/BishmeetaThapa/ecommerce",
     },
+
     {
-        title: "To Do List",
+        title: "Weather Dashboard",
+        description: "A weather application that provides real-time weather data, forecasts, and location-based information with an intuitive interface.",
+        tags: ["React", "API", "Tailwind CSS"],
+        image: weatherImg,
+        demo: "#",
+        code: "https://github.com/BishmeetaThapa/weather-dashboard",
+    },
+
+    {
+        title: "Personal Portfolio",
+        description: "My personal portfolio website built with Next.js and Framer Motion.",
+        tags: ["Next.js", "TypeScript", "Tailwind"],
+        image: portfolioImg,
+        demo: "#",
+        code: "https://github.com/BishmeetaThapa/portfolio",
+    },
+
+
+    {
+        title: "To-do-list-app",
         description: "A feature-rich task management app to organize daily activities with local storage support.",
         tags: ["React", "JavaScript", "CSS"],
-        image: "/project2.png",
+        image: todolistImg,
         demo: "#",
-        code: "https://github.com/BishmeetaThapa/todo-list",
+        code: "https://github.com/BishmeetaThapa/To-do-list-app",
     },
+
     {
-        title: "Quiz App",
+        title: "quizz",
         description: "An interactive quiz application with timer, score tracking, and category selection.",
         tags: ["React", "TypeScript", "Tailwind"],
-        image: "/project3.png",
+        image: quizzImg,
         demo: "#",
-        code: "https://github.com/BishmeetaThapa/quiz-app",
+        code: "https://github.com/BishmeetaThapa/quizz",
     },
     {
         title: "Calculator",
         description: "A fully functional calculator with standard arithmetic operations and a sleek design.",
         tags: ["JavaScript", "HTML", "CSS"],
-        image: "/project4.png",
+        image: calculatorImg,
         demo: "#",
-        code: "https://github.com/BishmeetaThapa/calculator",
+        code: "https://github.com/BishmeetaThapa/Calculator",
     },
     {
         title: "Tic Tac Toe",
         description: "A classic game featuring Player vs Player and Player vs AI modes.",
         tags: ["React", "Next.js", "Tailwind CSS"],
-        image: "/project5.png",
+        image: ticTacToeImg,
         demo: "#",
         code: "https://github.com/BishmeetaThapa/tic-tac-toe",
     },
-    {
-        title: "Personal Portfolio",
-        description: "My personal portfolio website built with Next.js and Framer Motion.",
-        tags: ["Next.js", "TypeScript", "Tailwind"],
-        image: "/project6.png",
-        demo: "#",
-        code: "https://github.com/BishmeetaThapa/portfolio",
-    },
+
 ];
 
 const Projects = () => {
@@ -75,10 +97,18 @@ const Projects = () => {
                         >
                             {/* Project Image */}
                             <div className="relative h-48 w-full bg-gray-200 overflow-hidden">
-                                {/* Fallback visual */}
-                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold text-xl text-center px-4 bg-gradient-to-br from-gray-100 to-gray-200">
-                                    {project.title}
-                                </div>
+                                {typeof project.image === 'object' ? (
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-600">
+                                        <span className="text-white text-4xl font-bold">{project.title.charAt(0)}</span>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Content */}
