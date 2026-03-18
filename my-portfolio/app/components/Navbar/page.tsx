@@ -22,13 +22,26 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Qualification", href: "#qualification" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Qualification", href: "/#qualification" },
+    { name: "Contact", href: "/#contact" },
   ];
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const isHome = href === "/";
+    if (isHome) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const targetId = href.replace("/#", "");
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <header
@@ -37,21 +50,22 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link href="#home" className="text-2xl font-bold text-gray-900 tracking-tighter">
+        <Link href="/" className="text-2xl font-bold text-gray-900 tracking-tighter">
           Bishmeeta<span className="text-blue-500">.</span>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
               href={link.href}
+              onClick={(e) => handleClick(e, link.href)}
               className="text-gray-700 font-medium hover:text-blue-500 transition-colors relative group"
             >
               {link.name}
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
-            </Link>
+            </a>
           ))}
         </nav>
 
@@ -76,14 +90,17 @@ const Navbar = () => {
           >
             <nav className="flex flex-col p-6 space-y-4 items-center">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setNavOpen(false)}
+                  onClick={(e) => {
+                    handleClick(e, link.href);
+                    setNavOpen(false);
+                  }}
                   className="text-lg font-medium text-gray-800 hover:text-blue-500 transition"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
             </nav>
           </motion.div>
