@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Award, Briefcase, Headphones } from "lucide-react"; // Changed icons
+import { Award, Briefcase, Headphones, Download } from "lucide-react"; // Changed icons
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -69,8 +69,15 @@ const About = () => {
               I&apos;m always eager to learn new technologies and improve my skills to deliver better digital experiences.
             </p>
 
-            {/* Download CV Button or similar could go here */}
-            {/* <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition">Download CV</button> */}
+            {/* Download CV Button */}
+            <a
+              href="/resume.pdf"
+              download="resume.pdf"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
+            >
+              <Download size={20} />
+              Download CV
+            </a>
           </motion.div>
 
         </div>
