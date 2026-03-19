@@ -68,6 +68,10 @@ const About = () => {
               My expertise lies in the JavaScript ecosystem, particularly **React**, **Next.js**, and **Node.js**.
               I&apos;m always eager to learn new technologies and improve my skills to deliver better digital experiences.
             </p>
+            <p className="text-gray-600 leading-relaxed text-lg">
+              I have successfully completed my <strong>MERN Stack Development</strong> course from <strong>Broadway Infosys</strong>,
+              where I gained comprehensive knowledge in building full-stack web applications.
+            </p>
 
             {/* Download CV Button */}
             <a
