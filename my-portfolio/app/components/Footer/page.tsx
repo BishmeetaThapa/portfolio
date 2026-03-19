@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin, Heart } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -38,13 +38,6 @@ const Footer = () => {
               aria-label="LinkedIn"
             >
               <Linkedin size={24} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white hover:scale-110 transition-all"
-              aria-label="Twitter"
-            >
-              <Twitter size={24} />
             </a>
           </div>
         </div>
