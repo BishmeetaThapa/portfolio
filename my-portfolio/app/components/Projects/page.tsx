@@ -15,7 +15,8 @@ const projects = [
     {
         title: "Ecommerce Website",
         description: "A fully responsive e-commerce platform featuring product listings, shopping cart management, and secure checkout. Built with React and Redux for state management.",
-        tags: ["React", "Redux", "Tailwind CSS"],
+        tags: ["React", "Redux", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+        backend: "Node.js, Express, MongoDB",
         image: ecommerceImg,
         demo: "#",
         code: "https://github.com/BishmeetaThapa/ecommerce",
@@ -24,7 +25,8 @@ const projects = [
     {
         title: "Weather Dashboard",
         description: "A weather application that provides real-time weather data, forecasts, and location-based information with an intuitive interface.",
-        tags: ["React", "API", "Tailwind CSS"],
+        tags: ["React", "API", "Tailwind CSS", "OpenWeather API"],
+        backend: "OpenWeather API",
         image: weatherImg,
         demo: "#",
         code: "https://github.com/BishmeetaThapa/weather-dashboard",
@@ -117,13 +119,21 @@ const Projects = () => {
                                 <p className="text-gray-600 mb-4 line-clamp-2 text-sm">{project.description}</p>
 
                                 {/* Tags */}
-                                <div className="flex flex-wrap gap-2 mb-6">
+                                <div className="flex flex-wrap gap-2 mb-2">
                                     {project.tags.map((tag, i) => (
                                         <span key={i} className="text-xs font-medium px-2.5 py-0.5 rounded bg-blue-100 text-blue-800">
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
+
+                                {/* Backend/Source */}
+                                {project.backend && (
+                                    <div className="mb-4">
+                                        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Backend/Source: </span>
+                                        <span className="text-xs text-gray-700">{project.backend}</span>
+                                    </div>
+                                )}
 
                                 {/* Links */}
                                 <div className="flex items-center justify-between mt-auto">
