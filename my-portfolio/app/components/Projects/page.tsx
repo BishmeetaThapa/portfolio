@@ -25,8 +25,8 @@ const projects = [
     {
         title: "Weather Dashboard",
         description: "A weather application that provides real-time weather data, forecasts, and location-based information with an intuitive interface.",
-        tags: ["React", "API", "Tailwind CSS", "OpenWeather API"],
-        backend: "OpenWeather API",
+        tags: ["React", "API", "Tailwind CSS", "Node.js", "Express"],
+        backend: "Custom Weather API (Node.js, Express)",
         image: weatherImg,
         demo: "#",
         code: "https://github.com/BishmeetaThapa/weather-dashboard",
