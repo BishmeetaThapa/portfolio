@@ -3,7 +3,20 @@
 A modern, responsive, and interactive personal portfolio website built with **React**, **Next.js**, and **Tailwind CSS**. This project showcases my skills, experience, and complete project history.
 
 ![Portfolio Preview](./public/preview.png)
-*(Note: Add a screenshot of the portfolio here)*
+### 📸 Screenshots
+<p align="center">
+  <img src="./public/profile.png" alt="Hero Section" width="800"/>
+  <br>
+  <br>
+  <img src="./public/about.png" alt="About Me Section" width="800"/>
+  <br>
+  <br>
+  <img src="./public/skills.png" alt="Skills Section" width="800"/>
+  <br>
+  <br>
+  <img src="./public/projects.png" alt="Projects Section" width="800"/>
+</p>
+
 
 **🌐 Live Demo:** [View Live Site](https://my-portfolio-zeta-one-b8oxqn8uuu.vercel.app/)
 
