@@ -3,16 +3,16 @@ A modern, responsive, and interactive personal portfolio website built with Next
 
 ### 📸 Screenshots
 <p align="center">
-  <img src="public/hero.png" alt="Hero Section" width="800"/>
+  <img src="my-portfolio/public/hero.png" alt="Hero Section" width="800"/>
   <br>
   <br>
-  <img src="public/about.png" alt="About Me Section" width="800"/>
+  <img src="my-portfolio/public/about.png" alt="About Me Section" width="800"/>
   <br>
   <br>
-  <img src="public/skills.png" alt="Skills Section" width="800"/>
+  <img src="my-portfolio/public/skills.png" alt="Skills Section" width="800"/>
   <br>
   <br>
-  <img src="public/projects.png" alt="Projects Section" width="800"/>
+  <img src="my-portfolio/public/projects.png" alt="Projects Section" width="800"/>
 </p>
 
 **🌐 Live Demo:** [View Live Site](https://my-portfolio-zeta-one-b8oxqn8uuu.vercel.app/)
