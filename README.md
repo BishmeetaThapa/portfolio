@@ -31,23 +31,56 @@ A modern, responsive, and interactive personal portfolio website built with Next
  📱 Fully Responsive: Optimized layouts for mobile, tablet, and desktop viewing.
 
 📂 Project Structure
+```
 my-portfolio/
-├── app/                 # Next.js App Router
-│   ├── api/             # API endpoints (e.g., send-email)
-│   ├── components/      # Reusable UI sections
-│   │   ├── About/       # Refactored with info cards
-│   │   ├── Contact/     # Form handling
-│   │   ├── Footer/      # Social links
-│   │   ├── Hero/        # Intro animations
-│   │   ├── Navbar/      # Responsive & glassmorphism
-│   │   ├── Projects/    # Dynamic project grid
-│   │   ├── Skills/      # Visual skill bars
-│   │   └── qualification/ # Timeline structure
-│   ├── globals.css      # Global styles & Tailwind directives
-│   ├── layout.tsx       # Root layout & SEO metadata
-│   └── page.tsx         # Main entry point
-├── public/              # Static assets and images
-└── README.md            # You are here!
+├── app/                        # Next.js App Router
+│   ├── api/                    # API endpoints
+│   │   └── send-email/         # Email sending API route
+│   ├── components/             # Reusable UI sections
+│   │   ├── About/              # About section with info cards
+│   │   ├── Contact/            # Contact form with validation
+│   │   ├── Footer/             # Footer with social links
+│   │   ├── Hero/               # Hero section with animations
+│   │   ├── Navbar/             # Responsive navbar with glassmorphism
+│   │   ├── Projects/           # Project gallery with details
+│   │   ├── Skills/             # Skills showcase section
+│   │   └── qualification/      # Education & experience timeline
+│   ├── portfolio/              # Portfolio sub-route
+│   ├── globals.css             # Global styles & Tailwind directives
+│   ├── layout.tsx              # Root layout & SEO metadata
+│   └── page.tsx                # Main entry point
+├── public/                     # Static assets and images
+│   ├── skills/                 # Skill icons
+│   │   ├── css.png
+│   │   ├── github.png
+│   │   ├── graphql.png
+│   │   ├── html.png
+│   │   ├── javascript.png
+│   │   ├── next.png
+│   │   ├── node.png
+│   │   ├── react.png
+│   │   ├── redux.png
+│   │   ├── rest api.png
+│   │   └── tailwind.png
+│   ├── about.png
+│   ├── calculator.png
+│   ├── contact.png
+│   ├── ecommerce.png
+│   ├── portfolio.png
+│   ├── profile.png
+│   ├── projects.png
+│   ├── quizz.png
+│   ├── skills.png
+│   ├── tic-tac-toe.png
+│   ├── todolist.png
+│   └── weather.png
+├── .env.example               # Environment variables template
+├── .env.local                 # Local environment variables
+├── next.config.ts             # Next.js configuration
+├── package.json                # Dependencies & scripts
+├── tsconfig.json               # TypeScript configuration
+└── README.md                   # You are here!
+```
 
 🛠️ Tech Stack
 Frontend: Next.js 16 (App Router), React 19, Tailwind CSS v4, Framer Motion, Lucide React.
