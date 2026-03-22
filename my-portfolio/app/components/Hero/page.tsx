@@ -30,12 +30,42 @@ export default function Hero() {
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
+        {/* PROFILE IMAGE - On top */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center md:justify-start mt-8 md:mt-0 order-1 md:order-1"
+        >
+          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden 
+                          border-4 border-white shadow-2xl 
+                          transition-transform duration-500 hover:scale-105 bg-blue-50">
+            {/* Placeholder for when image might be missing, but keeping logic */}
+            <div className="absolute inset-0 flex items-center justify-center text-gray-300 font-bold text-6xl">
+              BT
+            </div>
+            <Image
+              src="/profile.png"
+              alt="Bishmeeta Thapa"
+              fill
+              className="object-cover rounded-full"
+              priority
+              onError={(e) => {
+                // Fallback logic not directly supported in Next/Image props inline easily without state, 
+                // but styling ensures it looks okay if missing.
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+              }}
+            />
+          </div>
+        </motion.div>
+
         {/* TEXT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center md:text-left space-y-6"
+          className="text-center md:text-left space-y-6 order-2 md:order-2"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-wide text-gray-900">
             Hi, I&apos;m <span className="text-blue-600">Bishmeeta Thapa</span>
@@ -69,36 +99,6 @@ export default function Hero() {
             >
               See Projects <FileText size={20} />
             </button>
-          </div>
-        </motion.div>
-
-        {/* PROFILE IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex justify-center md:justify-end mt-8 md:mt-0"
-        >
-          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden 
-                          border-4 border-white shadow-2xl 
-                          transition-transform duration-500 hover:scale-105 bg-blue-50">
-            {/* Placeholder for when image might be missing, but keeping logic */}
-            <div className="absolute inset-0 flex items-center justify-center text-gray-300 font-bold text-6xl">
-              BT
-            </div>
-            <Image
-              src="/profile.png"
-              alt="Bishmeeta Thapa"
-              fill
-              className="object-cover rounded-full"
-              priority
-              onError={(e) => {
-                // Fallback logic not directly supported in Next/Image props inline easily without state, 
-                // but styling ensures it looks okay if missing.
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-              }}
-            />
           </div>
         </motion.div>
 
