@@ -5,6 +5,8 @@ A modern, responsive, and interactive personal portfolio website built with **Re
 ![Portfolio Preview](./public/preview.png)
 *(Note: Add a screenshot of the portfolio here)*
 
+**🌐 Live Demo:** [View Live Site](https://my-portfolio-zeta-one-b8oxqn8uuu.vercel.app/)
+
 ## 🚀 Features
 
 - **Modern UI/UX**: Clean design with glassmorphism standard, smooth gradients, and consistent typography.
