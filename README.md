@@ -5,16 +5,16 @@ A modern, responsive, and interactive personal portfolio website built with **Re
 ![Portfolio Preview](./public/preview.png)
 ### 📸 Screenshots
 <p align="center">
-  <img src="./public/profile.png" alt="Hero Section" width="800"/>
+  <img src="public/profile.png" alt="Hero Section" width="800"/>
   <br>
   <br>
-  <img src="./public/about.png" alt="About Me Section" width="800"/>
+  <img src="public/about.png" alt="About Me Section" width="800"/>
   <br>
   <br>
-  <img src="./public/skills.png" alt="Skills Section" width="800"/>
+  <img src="public/skills.png" alt="Skills Section" width="800"/>
   <br>
   <br>
-  <img src="./public/projects.png" alt="Projects Section" width="800"/>
+  <img src="public/projects.png" alt="Projects Section" width="800"/>
 </p>
 
 
