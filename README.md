@@ -13,6 +13,9 @@ A modern, responsive, and interactive personal portfolio website built with Next
   <br>
   <br>
   <img src="my-portfolio/public/projects.png" alt="Projects Section" width="800"/>
+  <br>
+  <br>
+  <img src="my-portfolio/public/contact.png" alt="Contact Section" width="800"/>
 </p>
 
 **🌐 Live Demo:** [View Live Site](https://my-portfolio-zeta-one-b8oxqn8uuu.vercel.app/)
