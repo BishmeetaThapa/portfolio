@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/send-email/route": "/api/send-email",
+  "/components/About/page": "/components/About",
+  "/components/Contact/page": "/components/Contact",
+  "/components/Footer/page": "/components/Footer",
+  "/components/Hero/page": "/components/Hero",
+  "/components/Navbar/page": "/components/Navbar",
+  "/components/Projects/page": "/components/Projects",
+  "/components/Skills/page": "/components/Skills",
+  "/components/qualification/page": "/components/qualification",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/portfolio/page": "/portfolio"
+}

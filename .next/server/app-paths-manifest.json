@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/send-email/route": "app/api/send-email/route.js",
+  "/components/About/page": "app/components/About/page.js",
+  "/components/Contact/page": "app/components/Contact/page.js",
+  "/components/Footer/page": "app/components/Footer/page.js",
+  "/components/Hero/page": "app/components/Hero/page.js",
+  "/components/Navbar/page": "app/components/Navbar/page.js",
+  "/components/Projects/page": "app/components/Projects/page.js",
+  "/components/Skills/page": "app/components/Skills/page.js",
+  "/components/qualification/page": "app/components/qualification/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/portfolio/page": "app/portfolio/page.js"
+}

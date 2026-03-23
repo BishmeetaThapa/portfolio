@@ -75,8 +75,8 @@ const About = () => {
 
             {/* Download CV Button */}
             <a
-              href="/resume.pdf"
-              download="resume.pdf"
+              href="/Bishmeeta CV.pdf"
+              download="Bishmeeta CV.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
             >
               <Download size={20} />

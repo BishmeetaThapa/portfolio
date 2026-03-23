@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/components/layout,_N_T_/components/Hero/layout,_N_T_/components/Hero/page,_N_T_/components/Hero"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/components/Hero/__PAGE__",
+    "/components/Hero",
+    "/components",
+    "/_index",
+    "/_head"
+  ]
+}
