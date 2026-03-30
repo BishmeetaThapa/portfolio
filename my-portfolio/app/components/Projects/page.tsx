@@ -5,9 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ecommerceImg from "../../../public/ecommerce.png";
 import todolistImg from "../../../public/todolist.png";
-import quizzImg from "../../../public/quizz.png";
-import calculatorImg from "../../../public/calculator.png";
-import ticTacToeImg from "../../../public/tic-tac-toe.png";
 import portfolioImg from "../../../public/portfolio.png";
 import weatherImg from "../../../public/weather.png";
 
@@ -51,30 +48,7 @@ const projects = [
         code: "https://github.com/BishmeetaThapa/To-do-list-app",
     },
 
-    {
-        title: "quizz",
-        description: "An interactive quiz application with timer, score tracking, and category selection.",
-        tags: ["React", "TypeScript", "Tailwind"],
-        image: quizzImg,
-        demo: "#",
-        code: "https://github.com/BishmeetaThapa/quizz",
-    },
-    {
-        title: "Calculator",
-        description: "A fully functional calculator with standard arithmetic operations and a sleek design.",
-        tags: ["JavaScript", "HTML", "CSS"],
-        image: calculatorImg,
-        demo: "#",
-        code: "https://github.com/BishmeetaThapa/Calculator",
-    },
-    {
-        title: "Tic Tac Toe",
-        description: "A classic game featuring Player vs Player and Player vs AI modes.",
-        tags: ["React", "Next.js", "Tailwind CSS"],
-        image: ticTacToeImg,
-        demo: "#",
-        code: "https://github.com/BishmeetaThapa/tic-tac-toe",
-    },
+
 
 ];
 

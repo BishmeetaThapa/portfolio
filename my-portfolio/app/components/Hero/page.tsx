@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, FileText } from "lucide-react";
+import profileImg from "../../../public/profile.png";
 
 export default function Hero() {
   const skills = [
@@ -45,17 +46,11 @@ export default function Hero() {
               BT
             </div>
             <Image
-              src="/profile.png"
+              src={profileImg}
               alt="Bishmeeta Thapa"
               fill
               className="object-cover rounded-full"
               priority
-              onError={(e) => {
-                // Fallback logic not directly supported in Next/Image props inline easily without state, 
-                // but styling ensures it looks okay if missing.
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-              }}
             />
           </div>
         </motion.div>
